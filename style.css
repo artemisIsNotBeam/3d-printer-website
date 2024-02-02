@@ -1,0 +1,136 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General Styles */
+body {
+    
+    color: white; /* White text for overall consistency */
+    font-family: 'Belanosima', sans-serif;
+    font-family: 'Montserrat', sans-serif; /* Specify the font family once for the whole body */
+    background-color: #659DBD;
+}
+
+.main{
+    padding-left: 10%;
+}
+
+
+#topimg {
+    width: 100%; /* Full width */
+  height: 50vh; /* Full height of the viewport */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; /* No repeat of the image */
+  color: white;
+  text-align: center;
+  position: relative;
+}
+
+a {
+    color:#2c5d76;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #03364f;
+    
+}
+
+/* Header Styles */
+header {
+    background: #BC986A; /* Gradient background for header */
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* Navigation Bar */
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+/* Active Link Highlighting */
+
+nav a:hover {
+    color: #2F1E2E;
+}
+
+/* Responsive Navigation Bar */
+@media (max-width: 600px) {
+    nav ul li {
+        display: block;
+        margin: 5px 0;
+    }
+}
+
+/* Footer Styles */
+footer {
+    background: #BC986A; /* Same gradient background as header */
+    padding: 20px 0;
+    font-size: 0.9em; /* Slightly smaller text for the footer */
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: start; /* Align to the start for varying content height */
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+    flex-wrap: wrap; /* Wrap items on smaller screens */
+}
+
+.footer-left,
+.footer-center,
+.footer-right {
+    margin: 10px; /* Spacing between footer sections */
+}
+
+.footer-left h2 {
+    font-size: 1.25em; /* Slightly larger text for the footer title */
+    margin-bottom: 8px; /* Spacing under the title */
+}
+
+.footer-center div,
+.footer-right .portal {
+    margin-bottom: 8px; /* Consistent margin for items */
+}
+
+.footer-center div i,
+.footer-right .portal i {
+    margin-right: 8px;
+}
+
+/* Responsive design adjustments */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .footer-left,
+    .footer-center,
+    .footer-right {
+        width: 100%; /* Full width on small screens */
+        margin-bottom: 20px;
+    }
+}
