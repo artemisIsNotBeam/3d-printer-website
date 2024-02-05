@@ -7,32 +7,43 @@
 
 /* General Styles */
 body {
-    
+    line-height:1.7;
+    size:15px;
     color: white; /* White text for overall consistency */
     font-family: 'Belanosima', sans-serif;
     font-family: 'Montserrat', sans-serif; /* Specify the font family once for the whole body */
     background-color: #659DBD;
 }
 
+.image-text-container {
+    display: flex; /* This will enable flexbox */
+    align-items: center; /* This will align items vertically in the middle */
+    justify-content: space-between; /* This will space out the items evenly */
+}
+
+.image-text-container img {
+    height:400px; /* Adjust the height as needed */
+    margin-right: 10px;
+}
+
+.image-text-container p {
+    margin: 0;
+    align-self: center;
+}
+
+
+li {
+    line-height: 1.2;
+}
+
+.main li{
+    margin-left: 30px;
+}
+
 .main{
     padding-left: 10%;
 }
 
-
-#topimg {
-    width: 100%; /* Full width */
-  height: 50vh; /* Full height of the viewport */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat; /* No repeat of the image */
-  color: white;
-  text-align: center;
-  position: relative;
-}
 
 a {
     color:#2c5d76;
