@@ -15,21 +15,24 @@ body {
     background-color: #659DBD;
 }
 
+.images-row {
+    display: flex; /* Establishes a flex container */
+    flex-wrap: wrap; /* Allows items to wrap to the next line if needed */
+    justify-content: space-between; /* Spaces out the items */
+}
+
 .image-text-container {
-    display: flex; /* This will enable flexbox */
-    align-items: center; /* This will align items vertically in the middle */
-    justify-content: space-between; /* This will space out the items evenly */
+    flex-basis: calc(33.333% - 10px); /* Assigns a base width, subtracting margin */
+    margin: 5px; /* Adds margin around each container */
+    text-align: center; /* Centers the text */
+
 }
 
 .image-text-container img {
-    height:400px; /* Adjust the height as needed */
-    margin-right: 10px;
+    width: 100%; /* Makes the image take up the full container width */
+    height: auto; /* Maintains the aspect ratio */
 }
 
-.image-text-container p {
-    margin: 0;
-    align-self: center;
-}
 
 
 li {
@@ -42,6 +45,7 @@ li {
 
 .main{
     padding-left: 10%;
+    padding-bottom: 1.5%;
 }
 
 
@@ -94,54 +98,91 @@ nav a:hover {
 }
 
 /* Footer Styles */
-footer {
-    background: #BC986A; /* Same gradient background as header */
-    padding: 20px 0;
-    font-size: 0.9em; /* Slightly smaller text for the footer */
+/* Footer Styles */
+
+.site-footer {
+    background-color: #BC986A; /* Dark background for contrast */
+    color: white;
+    text-align: center;
+    padding: 40px 0; /* Ample padding for airy footer */
 }
 
-.footer-container {
+.site-footer .container {
+    max-width: 1170px; /* Max width to keep the content centered */
+    margin: auto;
+    padding: 0 15px; /* Padding to ensure content doesn't touch the edges */
     display: flex;
-    justify-content: space-between;
-    align-items: start; /* Align to the start for varying content height */
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 0 20px;
-    flex-wrap: wrap; /* Wrap items on smaller screens */
+    flex-wrap: wrap; /* Ensures that the content wraps on small screens */
+    justify-content: space-around; /* Space around to distribute the inner items */
 }
 
-.footer-left,
-.footer-center,
-.footer-right {
-    margin: 10px; /* Spacing between footer sections */
+.site-footer .row {
+    width: 100%; /* Full width to wrap within container */
+    display: flex;
+    flex-wrap: wrap; /* Wrap the items */
+    justify-content: space-between; /* Space between to distribute the inner items */
 }
 
-.footer-left h2 {
-    font-size: 1.25em; /* Slightly larger text for the footer title */
-    margin-bottom: 8px; /* Spacing under the title */
+.site-footer .footer-about,
+.site-footer .footer-links {
+    flex-basis: 50%; /* Take up half the width on larger screens */
+    margin-bottom: 20px; /* Bottom margin for spacing */
 }
 
-.footer-center div,
-.footer-right .portal {
-    margin-bottom: 8px; /* Consistent margin for items */
+.site-footer .footer-about h6,
+.site-footer .footer-links h6 {
+    font-size: 1.2em; /* Slightly larger font-size for subheadings */
+    color: #f8f9fa;
+    margin-bottom: 15px; /* Spacing under the subheadings */
 }
 
-.footer-center div i,
-.footer-right .portal i {
-    margin-right: 8px;
+.site-footer .footer-about p,
+.site-footer .footer-links ul {
+    font-size: 0.9em; /* Slightly smaller font-size for footer text */
+    line-height: 1.6; /* Line height for better readability */
 }
 
-/* Responsive design adjustments */
+.site-footer .footer-links ul {
+    list-style: none; /* No bullets for the list */
+    padding: 0; /* No padding to start at the edge */
+}
+
+.site-footer .footer-links li {
+    margin-bottom: 10px; /* Margin bottom for spacing between list items */
+}
+
+.site-footer .footer-links a {
+    color: #f8f9fa;
+    text-decoration: none; /* No underline */
+    transition: color 0.3s ease; /* Transition for a smooth color change on hover */
+}
+
+.site-footer .footer-links a:hover {
+    color: #2c3e50; /* Color change on hover */
+}
+
+.site-footer hr {
+    border-top-color: #2c3e50; /* Lighter border color for the horizontal rule */
+    margin-top: 20px; /* Top margin for spacing before the hr */
+    margin-bottom: 20px; /* Bottom margin for spacing after the hr */
+}
+
+.site-footer p.copy-right {
+    font-size: 0.8em; /* Even smaller font-size for copyright text */
+    margin-bottom: 0; /* No bottom margin */
+    text-align: center; /* Centered text */
+}
+
+/* Responsive adjustments */
 @media (max-width: 768px) {
-    .footer-container {
-        flex-direction: column;
-        align-items: flex-start;
+    .site-footer .footer-about,
+    .site-footer .footer-links {
+        flex-basis: 100%; /* Each takes full width on smaller screens */
+        text-align: center; /* Centered text for better readability */
     }
+}
 
-    .footer-left,
-    .footer-center,
-    .footer-right {
-        width: 100%; /* Full width on small screens */
-        margin-bottom: 20px;
-    }
+/* Utilizing existing general styles */
+.site-footer a {
+    color: inherit; /* Footer links will inherit the white color from the footer style */
 }
