@@ -33,7 +33,25 @@ body {
     height: auto; /* Maintains the aspect ratio */
 }
 
+/* Ensure the video element does not exceed the width of its container */
+video {
+    max-width: 100%;
+    height: auto; /* Maintain aspect ratio */
+  }
+  
+/* Optionally, if the video is inside a container that should dictate its size */
+.video-container {
+/* Set a specific width or max-width as required, e.g., max-width: 640px; */
+/* This will be the maximum size of the video */
+width: 100%; /* You can set this to a specific value if needed */
+display: block; /* This ensures the container does not allow inline elements beside it */
+}
 
+/* Add any additional styling as required to position the video within its container */
+
+#special{
+    
+}
 
 li {
     line-height: 1.2;
@@ -58,6 +76,20 @@ a:hover {
     color: #03364f;
     
 }
+
+#special {
+    border: 3px solid #BC986A; /* Thick border with the specified color */
+    margin:5px;
+    padding: 12px; /* Spacing inside the div */
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+  }
+  
+  #special:hover {
+    transform: translateY(-5px); /* Slight lift effect on hover */
+    box-shadow: 0px 12px 20px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+  }
+  
 
 /* Header Styles */
 header {
